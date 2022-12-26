@@ -1,3 +1,5 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -27,12 +29,7 @@
         just add a class `unset` to it. 
     */
     a:not(.unset) {
-        text-decoration: none;
-        background-repeat: no-repeat;
-        background-size: 100% 1.5px;
-        background-position: 0 100%;
-        background-image:
-            linear-gradient(to right, theme('colors.text.link'), theme('colors.text.link'));
+        @apply transition-all duration-150 ease-in-out underline decoration-wavy decoration-text-link;
     }
 
     a:not(.unset):hover {
@@ -114,7 +111,7 @@
         transform: translateZ(0) scaleX(0);
         transform-origin: left center;
         transition: all .150s ease-in-out;
-        background-image: linear-gradient(to right, theme('colors.primary.main'), theme('colors.primary.main'));
+        background-image: linear-gradient(to right, theme('colors.text.link'), theme('colors.text.link'));
     }
 
     .animated-link.show:after {
