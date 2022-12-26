@@ -25,9 +25,6 @@ export class Node {
     if (!n) {
       throw new Error("Missing arg: n");
     }
-    // if (!components) {
-    //   throw new Error("Missing arg: components");
-    // }
     this.node = n;
     this.components = components;
     let children = this.node?.children;
@@ -51,6 +48,10 @@ export class Node {
       typeof components === "object" &&
       Object.hasOwn(components, this.node?.name)
     ) {
+      if (!components[this.node?.name].Component) {
+        throw new Error("Custom Component is missing the Component property");
+      }
+
       tag = components[this.node?.name].Component;
       props = {
         ...props,

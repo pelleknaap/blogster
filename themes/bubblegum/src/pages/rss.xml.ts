@@ -1,6 +1,6 @@
 import rss from "@astrojs/rss";
-import { blog } from "@local/shared/markdoc/frontmatter.schema";
-import { readAll } from "@local/shared/markdoc/read";
+import { readAll } from "../lib/markdoc/read";
+import { blog } from "../lib/markdoc/frontmatter.schema";
 import { SITE_TITLE, SITE_DESCRIPTION, SITE_URL } from "../config";
 
 export const get = async () => {
