@@ -64,7 +64,7 @@
         {#each groups as group}
           <article>
             <h3 class="my-0 mb-2">
-              {group.name}
+              {group.name} {#if group.fileSizeExt}& extended{/if}
             </h3>
             <div class="bg-primary-blue bg-opacity-40 inline-flex rounded-full">
               <span
