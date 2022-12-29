@@ -76,8 +76,12 @@ export const config: Config = {
       },
       selfClosing: true,
     },
-    font: {
+    fontWidget: {
       render: "FontWidget",
+      selfClosing: true,
+    },
+    fontFileSizeCalculator: {
+      render: "FontFileSizeCalculator",
       selfClosing: true,
     },
     tweet: {

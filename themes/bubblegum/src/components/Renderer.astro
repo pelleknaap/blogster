@@ -8,6 +8,7 @@ import GitHubGistEmbed from "./GitHubGistEmbed.astro";
 import CodeBlock from "./CodeBlock.astro";
 import Heading from "./Heading.astro";
 import FontWidget from './FontWidget/FontWidget.astro'
+import FontFileSizeCalculator from './FontFileSizeCalculator/FontFileSizeCalculator.astro'
 
 type Props = {
   content: Content;
@@ -42,6 +43,10 @@ const components = {
   },
   FontWidget: {
     Component: FontWidget,
+    props: {},
+  },
+  FontFileSizeCalculator: {
+    Component: FontFileSizeCalculator,
     props: {},
   },
 };

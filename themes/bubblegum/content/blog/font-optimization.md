@@ -6,17 +6,12 @@ external: false
 ---
 
 # Font Subsetting
-Font subsetting is a practice commonly used in web development to optimize the performance of a website. 
-When a webpage is loaded, all the fonts that are used on the page are downloaded by the user. 
-This significantly increases the page load time if the font files aren't optimized. 
-Font subsetting is a technique that decreases the size of the font files, and therefore speeding up the page loads.
-It involves only including the characters that are actually used on the page, rather than the entire font. 
-In most cases, this significantly reduces the file size of the font. 
-However, it's important to note that font subsetting can have an impact on the appearance of the text.
-If characters are removed from the font, but are still used on the page, the browser will substitute them with a fallback.
+Font subsetting is a practice commonly used in web development to optimize the performance of a website.
+With font subsetting, the file size of fonts can be significantly reduced, which can speed up the page load time.
+This is done by only including the characters that are actually used on the page, rather than the entire font.
+However, it's important to note that font subsetting can have an impact on the appearance of the text if not done carefully.
+If characters are removed from the font, and are still used on the page, the browser will substitute them with a fallback.
 This can break the design of the page, and should be avoided if possible.
-
-To summarize, font subsetting is extremely worthwhile, but should be done carefully to prevent weird charachter glitches.
 
 ## The unicode-range property
 Thesedays, the most performant and easiest method to subset your fonts is to use the `unicode-range` property.
@@ -38,14 +33,18 @@ Using the Gooel Fonts API is a better method if you want to refrain from manuall
 Simply add the text `&text=` to the end of the URL, and then add the characters that you want to use.
 Alternatively, you can select a few presets of characters that are commonly used. You can add `&subset=latin` or `&subset=latin-ext` to the URL for example.
 
+### Google Font File Size Calculator
+You can use the calculator below to get more insights about the file sizes of different font subsets.
+Feel free to play around with it! You can use ***Poppins*** as another font for example.
+
+{% fontFileSizeCalculator /%}
+
 
 // https://unicode-table.com/en/#control-character
 // https://www.w3.org/TR/PFE-evaluation/#static
 
 
-
-
-{% font /%}
+{% fontWidget /%}
 
 # Fallback Font Styling
 https://css-tricks.com/css-basics-fallback-font-stacks-robust-web-typography/
