@@ -1,50 +1,17 @@
-/* light theme */
-.theme-bubblegum {
-    /* #8AE6FB */
-    --color-primary-blue: 138 230 251;
-    /* #bef264 */
-    --color-primary-green: 190 242 100;
-    /* #FFDE69 */
-    --color-primary-yellow: 255 222 105;
-    /* primary-blue */
-    --color-primary-main: 34 211 238;
-
-    /* #3e3355 */
-    --color-text-body: 62 51 85;
-    /* #3e3355 */
-    --color-text-heading: 62 51 85;
-    /* #3e3355 */
-    --color-text-bold: 62 51 85;
-    /* Tailwind slate-500 */
-    --color-text-muted: 100 116 139;
-    /* Tailwind cyan-500 */
-    --color-text-link: 6 182 212;
-    /* black */
-    --color-text-code: 0 0 0;
-    /* black */
-    --color-text-selection: 0 0 0;
-
-    /* white */
-    --color-bg-body: 255 255 255;
-    /* tailwind amber-100 */
-    --color-bg-code: 254 243 199;
-    /* tailwind lime-200 */
-    --color-bg-selection: 217 249 157;
-
-    /* tailwind orange-100 */
-    --color-border-code: 255 237 213;
-}
+/* https://coolors.co/231942-9e0031-b388eb-ffdf64-00635d */
 
 /* dark theme */
 .theme-bubblegum.dark {
     /* Tailwind blue-500 */
-    --color-primary-blue: 179 136 235;
-    /* #bef264 */
-    --color-primary-green: 190 242 100;
-    /* #FFDE69 */
-    --color-primary-yellow: 255 222 105;
-    /* primary-blue */
-    --color-primary-main: 59 130 246;
+    --color-primary-purple: 179 136 235;
+    /* #9e0031 */
+    --color-primary-red: 158 0 49;
+    /* #231942 */
+    --color-primary-dark: 35 25 66;
+    /* #ffdf64 */
+    --color-primary-yellow: 255 223 100;
+    /* #00635d */
+    --color-primary-green: 0 99 93;
 
     /* tailwind slate-300 */
     --color-text-body: 203 213 225;
@@ -66,7 +33,10 @@
     /* sky-500 */
     --color-bg-code: 14 165 233;
     /* tailwind lime-200 */
-    --color-bg-selection: 217 249 157;
+    --color-bg-selection: 211 185 243;
+
+    /* Darker color red */
+    --color-track-red: 102 0 32;
 
     /* yellow-100 */
     --color-border-code: 254 243 199;

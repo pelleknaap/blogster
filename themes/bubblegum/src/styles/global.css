@@ -104,7 +104,7 @@
     .animated-link:after {
         left: 0;
         right: 0;
-        bottom: -3px;
+        bottom: -4px;
         content: "";
         height: 2px;
         position: absolute;
@@ -116,6 +116,11 @@
 
     .animated-link.show:after {
         transform: translateZ(0) scale(1);
+    }
+
+    .simple-input {
+        padding-bottom: 2px;
+        @apply transition-all duration-100 ease-in-out bg-bg-body w-32 border-text-link border-b-2 focus:border-b-4 focus:pb-0 outline-none focus:outline-none;
     }
 
     /* ------ REUSABLE UTILS - END ------ */

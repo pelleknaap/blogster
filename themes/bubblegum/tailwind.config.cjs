@@ -8,10 +8,11 @@ module.exports = {
         transparent: "transparent",
         current: "currentColor",
         primary: {
-          blue: "rgb(var(--color-primary-blue) / <alpha-value>)",
+          purple: "rgb(var(--color-primary-purple) / <alpha-value>)",
           green: "rgb(var(--color-primary-green) / <alpha-value>)",
           yellow: "rgb(var(--color-primary-yellow) / <alpha-value>)",
-          main: "rgb(var(--color-primary-main) / <alpha-value>)",
+          red: "rgb(var(--color-primary-red) / <alpha-value>)",
+          dark: "rgb(var(--color-primary-dark) / <alpha-value>)",
         },
         text: {
           body: "rgb(var(--color-text-body) / <alpha-value>)",
@@ -34,17 +35,6 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            a: {
-              "text-decoration": "none",
-              "background-repeat": "no-repeat",
-              "background-size": "100% 1.5px",
-              "background-position": "0 100%",
-              "background-image":
-                "linear-gradient(to right, rgb(var(--color-text-link)/1), rgb(var(--color-text-link)/1))",
-              "&:hover": {
-                color: "rgb(var(--color-text-link))",
-              },
-            },
             ul: {
               "padding-left": 0,
               "list-style": "none",

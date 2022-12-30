@@ -53,22 +53,20 @@
   };
 </script>
 
-<div class="flex justify-between my-24">
+<div class="flex justify-between my-24 not-prose">
   <div>
-    <h2 class="mb-4 mt-0">Subsets</h2>
-
     <div class="space-y-8">
       {#await calculateSize(webFont)}
         <p>Loading...</p>
       {:then groups}
         {#each groups as group}
           <article>
-            <h3 class="my-0 mb-2">
+            <h4 class="my-0 mb-2 text-white font-semibold">
               {group.name} {#if group.fileSizeExt}& extended{/if}
-            </h3>
-            <div class="bg-primary-blue bg-opacity-40 inline-flex rounded-full">
+            </h4>
+            <div class="bg-primary-purple bg-opacity-40 inline-flex rounded-full">
               <span
-                class="bg-primary-blue py-2 rounded-full block z-10 text-center text-white"
+                class="bg-primary-purple py-2 rounded-full block z-10 text-center text-white"
                 style:width="{group.fileSize * 10 + 50}px"
                 >{group.fileSize}kb</span
               >
