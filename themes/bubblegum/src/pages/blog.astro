@@ -24,49 +24,51 @@ const sortedPosts = posts
   <section slot="main">
     <ul>
       {
-        sortedPosts.map((post) => {
-          const formattedDate = new Date(
-            post.frontmatter.date
-          ).toLocaleDateString("en-us", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          });
-          return (
-            <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3">
-              <div
-                class="title transition-transform duration-300 transform hover:translate-x-2"
-              >
-                {post.frontmatter.external ? (
-                  <a
-                    href={post.frontmatter.url}
-                    target="_blank"
-                    class="unset
+        sortedPosts.length === 0 ? (
+          <h1 class="text-text-muted">No posts yet :/</h1>
+        ) : (
+          sortedPosts.map((post) => {
+            const formattedDate = new Date(
+              post.frontmatter.date
+            ).toLocaleDateString("en-us", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            });
+            return (
+              <li class="grid grid-cols-[1fr] md:grid-cols-[1fr_auto] mb-3">
+                <div class="title transition-transform duration-300 transform hover:translate-x-2">
+                  {post.frontmatter.external ? (
+                    <a
+                      href={post.frontmatter.url}
+                      target="_blank"
+                      class="unset
                         transition-[background-size] duration-300 
                         bg-gradient-to-r bg-left-bottom bg-no-repeat
                         bg-[length:0%_55%] hover:bg-[length:100%_55%] dark:bg-[length:0%_2px] hover:dark:bg-[length:100%_2px]
                         from-primary-purple to-primary-purple dark:from-primary-purple dark:to-primary-purple
                       "
-                  >
-                    <span>{post.frontmatter.title}</span>
-                    <span>
-                      <i class="ml-1 text-[12px] fa-solid fa-up-right-from-square" />
-                    </span>
-                  </a>
-                ) : (
-                  <a href={`/blog/${post.slug}`} class="unset">
-                    {post.frontmatter.title}
-                  </a>
-                )}
-              </div>
-              <div class="text-text-muted text-sm italic flex items-center">
-                <time datetime={post.frontmatter.date.toISOString()}>
-                  {formattedDate}
-                </time>
-              </div>
-            </li>
-          );
-        })
+                    >
+                      <span>{post.frontmatter.title}</span>
+                      <span>
+                        <i class="ml-1 text-[12px] fa-solid fa-up-right-from-square" />
+                      </span>
+                    </a>
+                  ) : (
+                    <a href={`/blog/${post.slug}`} class="unset">
+                      {post.frontmatter.title}
+                    </a>
+                  )}
+                </div>
+                <div class="text-text-muted text-sm italic flex items-center">
+                  <time datetime={post.frontmatter.date.toISOString()}>
+                    {formattedDate}
+                  </time>
+                </div>
+              </li>
+            );
+          })
+        )
       }
     </ul>
   </section>

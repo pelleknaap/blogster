@@ -3,6 +3,7 @@ title: "The Techniques of Google Fonts, and how to apply them manually"
 description: "Google Fonts is an amazing tool to manage and use fonts on your website. But how does it work? And how can you apply their state-of-the-art techniques if you need to use a font that isn't available on Google Fonts?"
 date: 2022-11-02
 external: false
+draft: true
 ---
 
 In this article, we will take a look at a few of the techniques that Google Fonts implements.

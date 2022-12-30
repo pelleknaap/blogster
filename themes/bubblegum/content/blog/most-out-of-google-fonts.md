@@ -3,6 +3,7 @@ title: "How to get the most out of Google Fonts"
 description: "Google Fonts is an amazing tool to manage and use fonts on your website. But how does it work? And how can you apply their state-of-the-art techniques if you need to use a font that isn't available on Google Fonts?"
 date: 2022-11-02
 external: false
+draft: true
 ---
 
 # Other article (How to get the most out of Google Fonts)
