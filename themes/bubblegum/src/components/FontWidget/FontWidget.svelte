@@ -124,7 +124,7 @@
 
   <div class="space-y-8">
     <div>
-      <h4 class="font-semibold">Fallback Font</h4>
+      <h4 class="font-semibold">Webfont</h4>
       <label class="flex justify-between w-full">
         <p class="">Select webfont</p>
 
