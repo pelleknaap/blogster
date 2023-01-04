@@ -2,6 +2,7 @@ import { z } from "zod";
 
 const blogBase = z.object({
   draft: z.boolean().default(false),
+  homepage: z.boolean().default(false),
   title: z.string({
     required_error: "Required frontmatter missing: title",
     invalid_type_error: "title must be a string",

@@ -23,6 +23,9 @@ module.exports = {
           link: "rgb(var(--color-text-link) / <alpha-value>)",
           selection: "rgb(var(--color-text-selection) / <alpha-value>)",
         },
+        input: {
+          border: "rgb(var(--color-input-border) / <alpha-value>)",
+        },
         bg: {
           body: "rgb(var(--color-bg-body) / <alpha-value>)",
           code: "rgb(var(--color-bg-code) / <alpha-value>)",
@@ -36,12 +39,12 @@ module.exports = {
         DEFAULT: {
           css: {
             ul: {
-              "padding-left": 0,
-              "list-style": "none",
+              paddingLeft: 0,
+              listStyle: "none",
             },
             "ul > li": {
               position: "relative",
-              "padding-left": "1.375rem",
+              paddingLeft: "1.375rem",
             },
             "ul > li::before": {
               position: "absolute",
@@ -50,7 +53,7 @@ module.exports = {
               color: "rgb(var(--color-text-muted))",
             },
             ol: {
-              "padding-left": "1.125rem",
+              paddingLeft: "1.125rem",
             },
             "ol > li::marker": {
               color: "rgb(var(--color-text-muted))",
@@ -64,6 +67,24 @@ module.exports = {
             "code::after": {
               content: "none",
             },
+            h1: {
+              fontSize: "1.5rem",
+              '@media (min-width: theme("screens.md"))': {
+                fontSize: '2.25rem',
+              },
+            },
+            h2: {
+              fontSize: "1.25rem",
+              '@media (min-width: theme("screens.md"))': {
+                fontSize: '1.5rem',
+              },
+            },
+            h3: {
+              fontSize: "1.15rem",
+              '@media (min-width: theme("screens.md"))': {
+                fontSize: '1.25rem',
+              },
+            }
           },
         },
         bubblegum: {

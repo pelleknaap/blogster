@@ -81,16 +81,32 @@
     document.head.appendChild(link);
   };
 
+  let copyText = "Copy CSS";
+
+  const copyFallbackCSS = async () => {
+    try {
+      await navigator.clipboard.writeText(stylingFallback);
+      copyText = "Copied!";
+    } catch (err) {
+      copyText = "Failed to copy";
+    }
+
+    setTimeout(() => {
+      copyText = "Copy CSS";
+    }, 1000);
+  };
+
   onMount(() => {
     fetchWebFont();
   });
 </script>
 
-<div class="grid grid-cols-2 gap-x-12 gap-y-8">
+<div class="grid md:grid-cols-2 gap-x-12 gap-y-8 my-16">
   <div class="space-y-8">
     <div>
       <h4 class="font-semibold">Fallback Font</h4>
-      <label class="flex justify-between w-full">
+
+      <label class="flex justify-between w-full flex-col md:flex-row">
         <p class="">Select fallback</p>
 
         <input
@@ -120,12 +136,15 @@
         </div>
       {/each}
     </div>
+
+    <button on:click={copyFallbackCSS} class="simple-input">{copyText}</button>
   </div>
 
   <div class="space-y-8">
     <div>
       <h4 class="font-semibold">Webfont</h4>
-      <label class="flex justify-between w-full">
+
+      <label class="flex justify-between w-full flex-col md:flex-row">
         <p class="">Select webfont</p>
 
         <div>
@@ -207,7 +226,7 @@
     width: 100%;
     height: 8.4px;
     cursor: pointer;
-    background: rgb(var(--color-track-red));
+    background: rgb(var(--color-track-purple));
     border-radius: 99px;
   }
   input[type="range"]::-webkit-slider-thumb {
@@ -218,6 +237,10 @@
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -6.5px;
+    transition: transform .2s ease-in-out;
+  }
+  input[type="range"]:focus::-webkit-slider-thumb {
+    transform: scale(1.25);
   }
   input[type="range"]::-moz-range-track {
     width: 100%;
@@ -233,5 +256,9 @@
     background: white;
     cursor: pointer;
     margin-top: -6.5px;
+    transition: transform .2s ease-in-out;
+  }
+    input[type="range"]:focus::-moz-range-thumb {
+    transform: scale(1.25);
   }
 </style>

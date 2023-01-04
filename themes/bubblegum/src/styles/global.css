@@ -120,7 +120,7 @@
 
     .simple-input {
         padding-bottom: 2px;
-        @apply transition-all duration-100 ease-in-out bg-bg-body w-32 border-text-link border-b-2 focus:border-b-4 focus:pb-0 outline-none focus:outline-none;
+        @apply transition-all duration-100 ease-in-out bg-bg-body w-32 border-input-border border-b-2 focus:border-b-4 focus:pb-0 outline-none focus:outline-none;
     }
 
     /* ------ REUSABLE UTILS - END ------ */

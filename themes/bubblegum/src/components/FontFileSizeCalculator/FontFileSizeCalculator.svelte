@@ -10,11 +10,9 @@
       { method: "GET" }
     );
     const text = await res.text();
-    console.log(text);
     const re = /(?<=url\()(.*)(?=\) format)/g;
     const urlMatches = [...text.matchAll(re)].map((match) => match[0]);
     const uniqueUrlMatches = uniq(urlMatches);
-    console.log(uniqueUrlMatches);
 
     const reSubsetName = /(?<=\/\* )(.*)(?= \*)/g;
     const subsetNameMatches = [...text.matchAll(reSubsetName)].map(
@@ -47,13 +45,11 @@
       }
     }
 
-    console.log(groups);
-
     return groups;
   };
 </script>
 
-<div class="flex justify-between my-24 not-prose">
+<div class="flex justify-between flex-col-reverse md:flex-row my-16 gap-y-8 not-prose">
   <div>
     <div class="space-y-8">
       {#await calculateSize(webFont)}
@@ -93,9 +89,9 @@
     <input
       type="text"
       bind:value={webFontInput}
-      class="bg-bg-body w-32 border-text-link border-b-2"
+      class="simple-input"
     />
 
-    <button type="submit">Fetch Font</button>
+    <button type="submit">Fetch Subsets</button>
   </form>
 </div>

@@ -119,6 +119,17 @@ export const config: Config = {
         return new Tag(this.render, { ...attributes }, children);
       },
     },
+    link: {
+      render: "AnchorTag",
+      attributes: {
+        href: { type: String, required: true },
+      },
+      transform(node, config) {
+        const attributes = node.transformAttributes(config);
+        const children = node.transformChildren(config);
+        return new Tag(this.render, { ...attributes }, children);
+      },
+    },
     // if you want to customise default tags, this is where you'd do it
     // after adding the code here, add an Astro component for this node
     // in Renderer.astro component

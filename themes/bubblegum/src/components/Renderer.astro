@@ -9,6 +9,7 @@ import CodeBlock from "./CodeBlock.astro";
 import Heading from "./Heading.astro";
 import FontWidget from './FontWidget/FontWidget.astro'
 import FontFileSizeCalculator from './FontFileSizeCalculator/FontFileSizeCalculator.astro'
+import AnchorTag from './AnchorTag.astro'
 
 type Props = {
   content: Content;
@@ -19,6 +20,10 @@ const { content } = Astro.props;
 const components = {
   Heading: {
     Component: Heading,
+    props: {},
+  },
+  AnchorTag: {
+    Component: AnchorTag,
     props: {},
   },
   CodeBlock: {

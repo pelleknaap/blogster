@@ -2,7 +2,7 @@
 
 /* dark theme */
 .theme-bubblegum.dark {
-    /* Tailwind blue-500 */
+    /* 0 */
     --color-primary-purple: 179 136 235;
     /* #9e0031 */
     --color-primary-red: 158 0 49;
@@ -27,16 +27,21 @@
     --color-text-code: 255 255 255;
     /* black */
     --color-text-selection: 0 0 0;
+    /* #9e0031 */
+    --color-input-border: 179 136 235;
 
     /* Tailwind slate-900 */
     --color-bg-body: 15 23 42;
     /* sky-500 */
     --color-bg-code: 14 165 233;
-    /* tailwind lime-200 */
-    --color-bg-selection: 211 185 243;
+    /* #ff96a4 */
+    --color-bg-selection: 255 150 164;
 
     /* Darker color red */
     --color-track-red: 102 0 32;
+
+    /* Primary color */
+    --color-track-purple: 179 136 235;
 
     /* yellow-100 */
     --color-border-code: 254 243 199;

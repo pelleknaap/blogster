@@ -4,25 +4,33 @@
 <section class="mb-8">
   <div class="mb-6">
     <h1
-      class="font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden"
+      class="font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden relative w-[12ch] mx-auto overflow-x-hidden"
     >
-      <span
-        class="
-            bg-gradient-to-bl bg-no-repeat bg-bottom bg-[length:90%_40%]
-            from-primary-purple to-primary-purple dark:from-primary-purple dark:to-primary-purple
-        "
-      >
-        Pelle v/d Knaap
-      </span>
+      <span id="box" class="bg-primary-purple py-2 px-2 absolute w-[12ch] left-1/2 bottom-1 z-0" style="transform: translateX(-151%)" />
+
+      <span class="z-10 relative">Pelle v/d Knaap</span>
     </h1>
     <!-- <p class="text-2xl pb-4">Web Developer. OSS Wizard. Blogger.</p> -->
   </div>
   <div>
-    <p class="mb-5">
+    <p>
       Hi! Welcome to my site! <br />
-      You can find my blog posts and projects here. <br /> <br />
-
-      This is still a <strong>Work in Progress</strong>, however, feel free to take a look.
+      You can find my blog posts and projects here. <br />
+      <br />
     </p>
   </div>
 </section>
+
+<script>
+  import { animate } from "motion";
+
+  animate(
+    "#box",
+    { x: ['-151%', '-50%'], opacity: [0.75, 1], scaleY: [0.975, 1.025] },
+    {
+      duration: .8,
+      easing: 'ease-in-out',
+      delay: 0.2,
+    }
+  );
+</script>
