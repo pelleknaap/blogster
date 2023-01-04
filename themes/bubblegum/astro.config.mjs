@@ -30,10 +30,6 @@ if (isBuild) {
 }
 
 // https://astro.build/config
-
-// https://astro.build/config
-
-// https://astro.build/config
 export default defineConfig({
   server: {
     port: SERVER_PORT
