@@ -1,5 +1,5 @@
 ---
-title: "Subsetting Fonts"
+title: "Optimizing performance by subsetting fonts"
 description: "Font subsetting is an incredible technique to reduce the file size of fonts and speed up page load times."
 date: 2023-01-04
 external: false
@@ -28,7 +28,7 @@ If you want to use a website to subset your fonts, I can recommend [Font Squirre
 It offers a ton of options to subset your fonts, and it's free to use.  
 If you prefer to use the terminal, you can use a CLI like [Subfont](https://github.com/Munter/subfont).  
 
-#### Subfont sizes
+#### Subset sizes
 You can use the interactive widget below to get more insight about the file sizes of different font subsets.
 Feel free to play around with it! You can use ***Poppins*** as another font for example.  
 All fonts are fetched from Google Fonts. You can use any font that's available on Google Fonts.
