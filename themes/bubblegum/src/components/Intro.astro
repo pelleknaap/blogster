@@ -4,9 +4,11 @@
 <section class="mb-8">
   <div class="mb-6">
     <h1
-      class="font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden relative w-[12ch] mx-auto overflow-x-hidden"
+      class="font-bold text-text-heading text-center text-4xl md:text-5xl pt-4 pb-2 overflow-hidden relative w-[14ch] mx-auto overflow-x-hidden"
     >
-      <span id="box" class="bg-primary-purple py-2 px-2 absolute w-[12ch] left-1/2 bottom-1 z-0" style="transform: translateX(-151%)" />
+      <span
+        id="box"
+        class="bg-primary-purple py-2 px-2 absolute w-[12ch] left-1/2 bottom-1 z-0 -translate-x-1/2"></span>
 
       <span class="z-10 relative">Pelle v/d Knaap</span>
     </h1>
@@ -22,15 +24,22 @@
 </section>
 
 <script>
-  import { animate } from "motion";
+  import { timeline } from "motion";
 
-  animate(
-    "#box",
-    { x: ['-151%', '-50%'], opacity: [0.75, 1], scaleY: [0.975, 1.025] },
-    {
-      duration: .8,
-      easing: 'ease-in-out',
-      delay: 0.2,
-    }
-  );
+  timeline([
+    [
+      "#box",
+      { x: ["-50%"], scaleY: [0.9, 1.025] },
+      { duration: 0.3, at: 0.2 },
+    ],
+    [
+      "#box",
+      { opacity: [0, 1] },
+      {
+        duration: 0.8,
+        easing: "ease-in-out",
+        at: 0.4,
+      },
+    ],
+  ]);
 </script>
