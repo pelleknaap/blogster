@@ -3,7 +3,7 @@
 
 export const SITE_TITLE = "Pelle v/d Knaap";
 export const SITE_DESCRIPTION =
-  "Welcome to my site! Here you can find my blog and my projects!";
+  "Blog posts about web development, animations, CSS, programming in general, and other things I find interesting.";
 export const TWITTER_HANDLE = "@pelleknaap";
 export const MY_NAME = "Pelle van der Knaap";
 
