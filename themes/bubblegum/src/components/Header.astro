@@ -1,28 +1,40 @@
 ---
 import Nav from "./Nav.astro";
+import Progress from "./Progress.astro";
+
+const { progress } = Astro.props;
 ---
 
-<header class="">
-  <a
-    class="unset absolute z-10 left-[50%] -top-[100rem] translate-x-[-50%] bg-white text-black px-8 py-2 focus:top-[initial]"
-    href="#main"
-  >
-    Skip to content
-  </a>
-  <Nav />
-  <div
-    class="justify-self-end py-2 flex items-center content-center text-text-bold"
-  >
+<div class="fixed left-0 w-full bg-bg-body z-50">
+  <header class="container mx-auto max-w-3xl">
     <a
-      class="unset ml-4 animated-link"
-      href="https://github.com/pelleknaap"
-      target="_blank" rel="noopener"
+      class="unset absolute z-10 left-[50%] -top-[100rem] translate-x-[-50%] bg-white text-black px-8 py-2 focus:top-[initial]"
+      href="#main"
     >
-      <i class="fa-brands fa-github" aria-hidden="true" title="Blogster on GitHub"></i>
-      <span>GitHub</span>
+      Skip to content
     </a>
-  </div>
-</header>
+    <Nav />
+    <div
+      class="justify-self-end py-2 flex items-center content-center text-text-bold w-full"
+    >
+      {progress && <Progress />}
+
+      <a
+        class="unset ml-4 animated-link flex items-center gap-x-2"
+        href="https://github.com/pelleknaap"
+        target="_blank"
+        rel="noopener"
+      >
+        <i
+          class="fa-brands fa-github"
+          aria-hidden="true"
+          title="The Github of Pelle van der Knaap"></i>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+</div>
+
 <style>
   header {
     grid-area: header;

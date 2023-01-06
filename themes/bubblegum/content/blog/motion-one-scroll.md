@@ -6,3 +6,7 @@ external: false
 draft: true
 homepage: true
 ---
+Add progress indicator to articles
+Write about the process of implementing 
+
+Use https://motion.dev/dom/scroll

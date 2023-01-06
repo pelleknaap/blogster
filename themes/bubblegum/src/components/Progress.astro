@@ -1,0 +1,40 @@
+---
+---
+
+<div class="container">
+  <svg width="50" height="50" viewBox="0 0 100 100" class="scroll-spinner">
+    <circle cx="50" cy="50" r="30" pathLength="1" class="background"></circle>
+    <circle cx="50" cy="50" r="30" pathLength="1" class="foreground"></circle>
+  </svg>
+</div>
+
+<style lang="scss">
+  .container {
+    
+  }
+
+  .scroll-spinner {
+    transform: rotate(-90deg);
+
+    circle {
+      stroke-dashoffset: 0;
+      stroke-width: 15%;
+      fill: none;
+    }
+
+    .background {
+      stroke: rgb(var(--color-bg-spinner-track));
+    }
+
+    .foreground {
+      stroke: rgb(var(--color-primary-purple));
+      stroke-dasharray: 0, 1;
+    }
+  }
+</style>
+
+<script>
+  import { scroll, animate } from "motion";
+
+  scroll(animate(".foreground", { strokeDasharray: ["0,1", "1,1"] }));
+</script>

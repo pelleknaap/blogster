@@ -36,6 +36,8 @@
     --color-bg-code: 14 165 233;
     /* #ff96a4 */
     --color-bg-selection: 255 150 164;
+    /* #1e293b */
+    --color-bg-spinner-track: 30 41 59;
 
     /* Darker color red */
     --color-track-red: 102 0 32;

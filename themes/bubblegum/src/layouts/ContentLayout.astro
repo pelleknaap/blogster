@@ -1,10 +1,4 @@
 ---
-/* 
-  This layout is used in pages that render markdoc content
-  - pages/blog/[slug].astro
-*/
-
-// Import the global.css file here so that it is included on
 import "../styles/theme.css";
 import "../styles/global.css";
 
@@ -37,20 +31,23 @@ const formattedDate = new Date(date).toLocaleDateString("en-us", {
     <Favicon />
     <GoogleFont />
     <FontAwesome />
-    <script defer data-domain="knaap.dev" src="https://analytics.cap.betrouw.nl/js/script.outbound-links.js"></script>
+    <script
+      defer
+      data-domain="knaap.dev"
+      src="https://analytics.cap.betrouw.nl/js/script.outbound-links.js"
+    ></script>
   </head>
 
   <body
     class="max-w-3xl mx-auto min-h-screen text-text-body bg-bg-body px-6 sm:px-8"
   >
-    <Header />
+    <Header progress/>
     <main id="main">
       <section class="blog-post prose max-w-none prose-bubblegum">
         <h1 class="m-0 mb-[0.25em]">
-          <span class="
-              pl-6 relative block leading-[150%]
-              after:absolute after:content-[''] after:w-2 after:h-full after:top-0 after:left-0 after:bg-primary-red
-            ">
+          <span
+            class="pl-6 relative block leading-[150%] after:absolute after:content-[''] after:w-2 after:h-full after:top-0 after:left-0 after:bg-primary-red"
+          >
             {title}
           </span>
         </h1>
