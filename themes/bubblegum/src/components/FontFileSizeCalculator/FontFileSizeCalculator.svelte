@@ -60,6 +60,7 @@
             <h4 class="my-0 mb-2 text-white font-semibold">
               {group.name} {#if group.fileSizeExt}& extended{/if}
             </h4>
+
             <div class="bg-primary-purple bg-opacity-40 inline-flex rounded-full">
               <span
                 class="bg-primary-purple py-2 rounded-full block z-10 text-center text-white"
@@ -90,7 +91,10 @@
       type="text"
       bind:value={webFontInput}
       class="simple-input"
+      name="webfont"
     />
+
+    <label for="webfont" class="sr-only">Webfont from Google Fonts</label>
 
     <button type="submit">Fetch Subsets</button>
   </form>
