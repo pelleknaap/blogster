@@ -1,7 +1,8 @@
 ---
+const {show} = Astro.props;
 ---
 
-<div class="container">
+<div class={`container ${!show ? 'invisible' : ''}`} >
   <svg width="50" height="50" viewBox="0 0 100 100" class="scroll-spinner">
     <circle cx="50" cy="50" r="30" pathLength="1" class="background"></circle>
     <circle cx="50" cy="50" r="30" pathLength="1" class="foreground"></circle>

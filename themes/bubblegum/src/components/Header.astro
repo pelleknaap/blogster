@@ -17,7 +17,7 @@ const { progress } = Astro.props;
     <div
       class="justify-self-end py-2 flex items-center content-center text-text-bold w-full"
     >
-      {progress && <Progress />}
+      <Progress show={progress}/>
 
       <a
         class="unset ml-4 animated-link flex items-center gap-x-2"
